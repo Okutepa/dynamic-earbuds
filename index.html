@@ -1,13 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hilite EarBuds</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sanchez:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <title>Hilite Buds</title>
+    <!-- link to greensock main library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
   </head>
   <body>
+    <section class="grid-con">
+      <div class="col-span-full">
+        <model-viewer
+          id="model"
+          src="model/earbuds.gltf"
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          camera-controls
+          tone-mapping="neutral"
+          poster="poster.webp"
+          shadow-intensity="1"
+          field-of-view="10deg"
+        >
+          <button
+            class="Hotspot"
+            slot="hotspot-1"
+            data-position="0.8612095732495759m 0.9028440537851147m 2.260869694896523m"
+            data-normal="0.6116681137476806m -0.264333747146983m 0.7456472280801354m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation"></div></button
+          ><button
+            class="Hotspot"
+            slot="hotspot-2"
+            data-position="0.7889355496902719m 0.8970283770163366m 1.9480223836452395m"
+            data-normal="-0.3039898567352599m -0.062323637974348665m -0.9506344887240934m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation"></div></button
+          ><button
+            class="Hotspot"
+            slot="hotspot-3"
+            data-position="0.8365418590448623m 0.7099004219247715m 2.2073513378871397m"
+            data-normal="0.7065111999039899m -0.2543572070006581m 0.6604122467497471m"
+            data-visibility-attribute="visible"
+          >
+            <div class="HotspotAnnotation"></div>
+          </button>
+          <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+          </div>
+        </model-viewer>
+      </div>
+    </section>
+
+    <!-- Loads <model-viewer> for browsers: -->
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"
+    ></script>
     <script src="js/main.js"></script>
   </body>
 </html>
