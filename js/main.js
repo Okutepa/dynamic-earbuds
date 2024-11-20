@@ -1,6 +1,10 @@
 (() => {
-  console.log("IIFE Fired");
 
+console.log("IIFE Fired");
+
+  const sidebar = document.querySelector(".sidebar");
+  const showSidebarButton = document.querySelector(".hideondesktop a");
+  const hideSidebarButton = document.querySelector(".sidebar li:first-child a");
   const infoHotspot = [
     {
       slot: "hotspot-1",
@@ -24,6 +28,16 @@
       imgSrc: "images/noise-cancelling.svg",
     },
   ];
+
+
+  function showSidebar() {
+    sidebar.classList.add("show");
+  }
+  
+  function hideSidebar() {
+    sidebar.classList.remove("show");
+  }
+  
 
   // Populate content dynamically
   function populateContent(hotspotDataItem, container) {
@@ -58,4 +72,7 @@
     hotspot.addEventListener("mouseover", showInfo);
     hotspot.addEventListener("mouseout", hideInfo);
   });
+
+  showSidebarButton.addEventListener("click", showSidebar);
+  hideSidebarButton.addEventListener("click", hideSidebar);
 })();

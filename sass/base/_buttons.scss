@@ -1,1 +1,22 @@
-@import "../abstracts";
+@use "../abstracts" as a;
+
+button {
+    background-color: a.$primary-color;
+    padding: 16px 32px;
+    border-radius: 50px;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: a.$secondary-color;
+        color: a.$primary-color;
+        border: 1px solid a.$primary-color;
+    }
+}
+
+.learn {
+    color: a.$primary-color;
+    text-decoration: none;
+    margin-top: -56px;
+    font-weight: 800;
+}

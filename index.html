@@ -17,52 +17,233 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
   </head>
   <body>
-    <section class="grid-con">
-      <div class="col-span-full">
-        <model-viewer
-          id="model"
-          src="model/earbuds.gltf"
-          ar
-          ar-modes="webxr scene-viewer quick-look"
-          camera-controls
-          tone-mapping="neutral"
-          poster="poster.webp"
-          shadow-intensity="1"
-          field-of-view="10deg"
-        >
-          <button
-            class="Hotspot"
-            slot="hotspot-1"
-            data-position="0.8612095732495759m 0.9028440537851147m 2.260869694896523m"
-            data-normal="0.6116681137476806m -0.264333747146983m 0.7456472280801354m"
-            data-visibility-attribute="visible"
-          >
-            <div class="HotspotAnnotation"></div></button
-          ><button
-            class="Hotspot"
-            slot="hotspot-2"
-            data-position="0.7889355496902719m 0.8970283770163366m 1.9480223836452395m"
-            data-normal="-0.3039898567352599m -0.062323637974348665m -0.9506344887240934m"
-            data-visibility-attribute="visible"
-          >
-            <div class="HotspotAnnotation"></div></button
-          ><button
-            class="Hotspot"
-            slot="hotspot-3"
-            data-position="0.8365418590448623m 0.7099004219247715m 2.2073513378871397m"
-            data-normal="0.7065111999039899m -0.2543572070006581m 0.6604122467497471m"
-            data-visibility-attribute="visible"
-          >
-            <div class="HotspotAnnotation"></div>
-          </button>
-          <div class="progress-bar hide" slot="progress-bar">
-            <div class="update-bar"></div>
-          </div>
-        </model-viewer>
-      </div>
-    </section>
+    <header>
+      <div class="header-sec grid-con">
+        <img class="desk-logo" src="images/earbuds-logo.svg" alt="" />
+        <nav class="navigation">
+          <ul class="sidebar" id="desk-hid">
+            <li>
+              <a href="#" class="close"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="44px"
+                  viewBox="0 -960 960 960"
+                  width="44px"
+                  fill="#fff"
+                  
+                >
+                  <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                  /></svg
+              ></a>
+            </li>
+            <li><a href="#">Students</a></li>
+            <li><a href="#">Features/a></li>
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Accessories</a></li>
+            
+              <img src="images/user-icon.svg" alt="">
+              <img src="images/cart.svg" alt="">
+            
+          </ul>
 
-    <!-- Loads <model-viewer> for browsers: -->
+          <ul id="box-shadow">           
+            <li class="hidemobile"><a href="#">Home</a></li>
+            <li class="hidemobile"><a href="#">Features</a></li>
+            <li class="hidemobile"><a href="#">Design</a></li>
+            <li class="hidemobile"><a href="#">Accessories</a></li>
+            <li class="hideondesktop">
+              <a href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#e8eaed"
+                >
+                  <path
+                    d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="icons">
+          <img src="images/user-icon.svg" alt="">
+          <img src="images/cart.svg" alt="">
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="grid-con">
+
+        <div class="elipse l-col-start-3 l-col-span-8">
+          <img id="image" src="images/placeholder-pic.png" alt="">
+          <img id="text" src="images/hero-text.svg" alt="">
+        </div>
+
+        <!-- <button class="l-col-start-6 l-col-span-2">Add to cart</button> -->
+      </section>
+
+      <section class="heading grid-con">
+        <h2 class="l-col-start-3 l-col-span-8">Hililte Earbuds Features</h2>
+        <p class="l-col-start-3 l-col-span-8">Lorem ipsum dolor sit amet consectetur. Nulla 
+          vestibulum aliquam odio elementum. Ornare in 
+          magna congue venenatis. </p>
+      </section>
+
+      <section class="grid-con model">
+        <div class="col-span-full">
+          <model-viewer
+            id="model"
+            src="model/earbuds.gltf"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            tone-mapping="neutral"
+            poster="poster.webp"
+            shadow-intensity="1"
+            field-of-view="10deg"
+          >
+            <button
+              class="Hotspot"
+              slot="hotspot-1"
+              data-position="0.8612095732495759m 0.9028440537851147m 2.260869694896523m"
+              data-normal="0.6116681137476806m -0.264333747146983m 0.7456472280801354m"
+              data-visibility-attribute="visible"
+            >
+              <div class="HotspotAnnotation"></div></button
+            ><button
+              class="Hotspot"
+              slot="hotspot-2"
+              data-position="0.7889355496902719m 0.8970283770163366m 1.9480223836452395m"
+              data-normal="-0.3039898567352599m -0.062323637974348665m -0.9506344887240934m"
+              data-visibility-attribute="visible"
+            >
+              <div class="HotspotAnnotation"></div></button
+            ><button
+              class="Hotspot"
+              slot="hotspot-3"
+              data-position="0.8365418590448623m 0.7099004219247715m 2.2073513378871397m"
+              data-normal="0.7065111999039899m -0.2543572070006581m 0.6604122467497471m"
+              data-visibility-attribute="visible"
+            >
+              <div class="HotspotAnnotation"></div>
+            </button>
+            <div class="progress-bar hide" slot="progress-bar">
+              <div class="update-bar"></div>
+            </div>
+          </model-viewer>
+          
+        </div>
+        <button class="l-col-start-6 l-col-span-2">Add to cart</button>
+      </section> 
+
+      <section class="heading grid-con">
+        <h2 class="l-col-start-3 l-col-span-8">Hililte Earbuds Features</h2>
+        <p class="l-col-start-3 l-col-span-8">Lorem ipsum dolor sit amet consectetur. Nulla 
+          vestibulum aliquam odio elementum. Ornare in 
+          magna congue venenatis. 
+        </p>
+
+        <a href="#" class="learn l-col-start-6 l-col-span-2">Learn more</a>
+
+        <div class="l-col-start-1 l-col-span-4 card">
+
+        </div>
+
+        <div class="l-col-start-5 l-col-span-4 card">
+
+        </div>
+
+        <div class="l-col-start-9 l-col-span-4 card">
+
+        </div>
+        
+      </section>
+
+      <section class="heading grid-con">
+        <div class="l-col-start-3 l-col-span-8">
+          <h2 >Hililte Earbuds Features</h2>
+          <p>Lorem ipsum dolor sit amet consectetur. Nulla 
+          vestibulum aliquam odio elementum. Ornare in 
+          magna congue venenatis. 
+          </p>
+        </div>
+
+        <div class="l-col-start-1 l-col-span-12 highlight">
+          <div class="l-col-start-8 l-col-span-5 accessories"></div>
+            <div class="text">
+              <h3>Hilite Earbuds Accessories</h3>
+              <p>Lorem ipsum dolor sit amet consectetur. Nulla vestibulum aliquam odio elementum. 
+              Ornare in magna congue venenatis enim. Lorem ipsum dolor sit amet consectetur. 
+              Nulla vestibulum aliquam odio elementum. Ornare in magna congue venenatis enim. 
+              </p>
+              <a href="#" class="learn">Learn more</a>
+            </div>
+            
+        </div>
+
+        <div class="l-col-start-1 l-col-span-12 highlight">
+            <div class="text">
+              <h3>Hilite Earbuds Accessories</h3>
+              <p>Lorem ipsum dolor sit amet consectetur. Nulla vestibulum aliquam odio elementum. 
+              Ornare in magna congue venenatis enim. Lorem ipsum dolor sit amet consectetur. 
+              Nulla vestibulum aliquam odio elementum. Ornare in magna congue venenatis enim. 
+              </p>
+              <a href="#" class="learn">Learn more</a>
+            </div>
+            <div class="l-col-start-8 l-col-span-5 accessories"></div>
+        </div>
+        <button class="l-col-start-6 l-col-span-2 btn">Add to cart</button>
+      </section>
+      
+      <section class="heading grid-con">
+        <div class="l-col-start-3 l-col-span-8">
+          <h2 >Hililte Earbuds Features</h2>
+          <p>Lorem ipsum dolor sit amet consectetur. Nulla 
+          vestibulum aliquam odio elementum. Ornare in 
+          magna congue venenatis. 
+          </p>
+        </div>
+        <div class="l-col-start-1 l-col-span-12 scroll" >
+
+        </div>
+        <div class="price l-col-start-4 l-col-span-6">
+          <p>Price - $400</p>
+          <p>Hilite Wireless Earbuds</p>
+          <button class="l-col-start-6 l-col-span-2 btn">Add to cart</button>
+        </div>
+      </section>
+
+      <footer> 
+          <div class="grid-con">
+            <div class="col-span-full footer-con">
+              <img src="images/earbuds-logo.svg" alt="">
+
+              <nav>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Design</a></li>
+                  <li><a href="#">Accessories</a></li>
+                </ul>
+              </nav>
+
+              <div class="socials">
+                <a href=""><img src="images/facebook.svg" alt=""></a>
+                <a href=""><img src="images/instagram.svg" alt=""></a>
+                <a href=""><img src="images/twitter.svg" alt=""></a>
+              </div>
+            </div>
+          </div>
+      </footer>
+      
+      
+    </main>
+  
     <script
       type="module"
       src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"
