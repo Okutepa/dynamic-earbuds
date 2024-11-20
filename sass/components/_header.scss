@@ -1,0 +1,154 @@
+@use '../abstracts/' as a;
+
+header {
+    background-color: a.$secondary-color;
+    padding: 16px 0;
+    margin-bottom: 0px;
+    
+  }
+
+  .desk-logo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .header-sec {
+    /* max-width: 1440px; */
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navigation ul {
+    margin: auto;
+  }
+
+  .navigation ul .close svg:hover path {
+    fill: #831c20;
+}
+  
+  .navigation ul li {
+    list-style: none;
+  }
+  
+  .header-sec {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+//   .header-sec img {
+//     height: 22px;
+//     width: 96px;
+//   }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    background-color: #000000;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    padding-top: 200px;
+    text-align: center;
+  }
+  
+  .sidebar.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .sidebar li {
+    padding-bottom: 32px;
+    width: 100%;
+  }
+  
+  .sidebar li a {
+    width: 100%;
+    font-size: 2.4rem;
+  }
+  
+  .hidemobile {
+    display: none;
+  }
+  
+  .hideondesktop {
+    margin-left: 200px;
+  }
+
+  .icons {
+    display: none;
+  }
+
+
+  @media screen and (min-width: 768px) {
+    .icons {
+        display: flex;
+        flex-direction: row;
+       
+    }
+
+    .logo-mob {
+      display: none;
+    }
+  
+    .header-sec nav ul {
+      display: flex;
+    }
+  
+    .header-sec nav ul li {
+      list-style: none;
+      padding-right: 48px;
+    }
+  
+    .header-sec nav ul li:last-child {
+      padding-right: 0;
+    }
+  
+    .header-sec nav ul li a {
+      text-decoration: none;
+      color: #fff;
+     padding: 0px 12px 0 12px;
+    }
+  
+    .header-sec nav ul li a:hover {
+        cursor: pointer;
+        color: #000000;
+        border: 1px solid white;
+        background-color: white;
+        border-radius: 8px;
+        transition: all 10ms ease;
+    }
+  
+    .hidemobile {
+      display: flex;
+    }
+  
+    .hideondesktop {
+      display: none;
+    }
+  
+    #desk-hid {
+      display: none;
+    }
+
+    .navigation ul li a {
+        text-decoration: none;
+        color: #fff;
+      }
+    
+    
+  }
