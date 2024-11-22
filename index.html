@@ -80,7 +80,7 @@
       <section class="grid-con">
 
         <div class="elipse l-col-start-3 l-col-span-8">
-          <img id="image" src="images/placeholder-pic.png" alt="">
+          <img id="image" src="images/image-2.png" alt="">
           <img id="text" src="images/hero-text.svg" alt="">
         </div>
 
@@ -150,15 +150,68 @@
 
         <a href="#" class="learn l-col-start-6 l-col-span-2">Learn more</a>
 
-        <div class="l-col-start-1 l-col-span-4 card">
+        <!-- <div class="l-col-start-1 l-col-span-4 card" id="card-1">
 
         </div>
 
-        <div class="l-col-start-5 l-col-span-4 card">
+        <div class="l-col-start-5 l-col-span-4 card" id="card-2">
 
         </div>
 
-        <div class="l-col-start-9 l-col-span-4 card">
+        <div class="l-col-start-9 l-col-span-4 card" id="card-3">
+
+        </div> -->
+
+        <div class="wrapper col-span-full">
+          <div class="container ">
+            <input type="radio" name="slide" id="c1" checked>
+            <label for="c1" class="caro">
+              <div class="row">
+                <div class="icon"></div>
+                <div class="description">
+                  
+                </div>
+              </div>
+            </label>
+
+            <input type="radio" name="slide" id="c2">
+            <label for="c2" class="caro">
+              <div class="row">
+                <div class="icon"></div>
+                <div class="description">
+                  
+                </div>
+              </div>
+            </label>
+
+            <input type="radio" name="slide" id="c3">
+            <label for="c3" class="caro">
+              <div class="row">
+                <div class="icon"></div>
+                <div class="description">
+                  
+                </div>
+              </div>
+            </label>
+
+            <input type="radio" name="slide" id="c4">
+            <label for="c4" class="caro">
+              <div class="row">
+                <div class="icon"></div>
+                <div class="description">
+                </div>
+              </div>
+            </label>
+
+            <input type="radio" name="slide" id="c5">
+            <label for="c5" class="caro">
+              <div class="row">
+                <div class="icon"></div>
+                <div class="description">
+                </div>
+              </div>
+            </label>
+          </div>
 
         </div>
         
@@ -172,8 +225,14 @@
           magna congue venenatis. 
           </p>
         </div>
+        <button class="l-col-start-6 l-col-span-2 btn">Add to cart</button>
+      </section>
 
-        <div class="l-col-start-1 l-col-span-12 highlight">
+        <div class="col-span-full">
+          <canvas id="explode-view"></canvas> 
+      </div>
+
+        <!-- <div class="l-col-start-1 l-col-span-12 highlight">
           <div class="l-col-start-8 l-col-span-5 accessories"></div>
             <div class="text">
               <h3>Hilite Earbuds Accessories</h3>
@@ -184,9 +243,9 @@
               <a href="#" class="learn">Learn more</a>
             </div>
             
-        </div>
+        </div> -->
 
-        <div class="l-col-start-1 l-col-span-12 highlight">
+        <!-- <div class="l-col-start-1 l-col-span-12 highlight">
             <div class="text">
               <h3>Hilite Earbuds Accessories</h3>
               <p>Lorem ipsum dolor sit amet consectetur. Nulla vestibulum aliquam odio elementum. 
@@ -196,9 +255,8 @@
               <a href="#" class="learn">Learn more</a>
             </div>
             <div class="l-col-start-8 l-col-span-5 accessories"></div>
-        </div>
-        <button class="l-col-start-6 l-col-span-2 btn">Add to cart</button>
-      </section>
+        </div> -->
+       
       
       <section class="heading grid-con">
         <div class="l-col-start-3 l-col-span-8">
@@ -208,15 +266,39 @@
           magna congue venenatis. 
           </p>
         </div>
-        <div class="l-col-start-1 l-col-span-12 scroll" >
 
+        
+        <div class="l-col-start-1 l-col-span-12 scroll" >
+          <div id="mobile-tablet-view">
+            <img src="images/earbud-x-ray.jpg" alt="x-ray view of earbud" />
+            <img src="images/earbud.jpg" alt="regular view of earbud" />
+          </div>
+          <div id="comparison-con">
+            <div id="xray">
+              <div id="divisor"></div>
+            </div>
+            <input type="range" min="0" max="100" value="50" id="slider" />
+          </div>
         </div>
-        <div class="price l-col-start-4 l-col-span-6">
+        <!-- <div class="price l-col-start-4 l-col-span-6">
           <p>Price - $400</p>
           <p>Hilite Wireless Earbuds</p>
           <button class="l-col-start-6 l-col-span-2 btn">Add to cart</button>
-        </div>
+        </div> -->
       </section>
+
+      <!-- <div class="col-span-full">
+        <div id="mobile-tablet-view">
+          <img src="images/earbud-x-ray.jpg" alt="x-ray view of earbud" />
+          <img src="images/earbud.jpg" alt="regular view of earbud" />
+        </div>
+        <div id="comparison-con">
+          <div id="xray">
+            <div id="divisor"></div>
+          </div>
+          <input type="range" min="0" max="100" value="50" id="slider" />
+        </div>
+      </div> -->
 
       <footer> 
           <div class="grid-con">
@@ -243,7 +325,9 @@
       
       
     </main>
-  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
     <script
       type="module"
       src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"

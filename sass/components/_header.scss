@@ -2,7 +2,6 @@
 
 header {
     background-color: a.$secondary-color;
-    padding: 16px 0;
     margin-bottom: 0px;
     
   }
@@ -97,9 +96,10 @@ header {
   @media screen and (min-width: 768px) {
     .icons {
         display: flex;
-        flex-direction: row;
-       
-    }
+        gap: 24px;  
+    
+        }
+
 
     .logo-mob {
       display: none;
@@ -119,12 +119,15 @@ header {
     }
   
     .header-sec nav ul li a {
+        font-size: 1rem;
+        font-weight: 200;
       text-decoration: none;
       color: #fff;
      padding: 0px 12px 0 12px;
     }
   
     .header-sec nav ul li a:hover {
+        font-weight: 700;
         cursor: pointer;
         color: #000000;
         border: 1px solid white;
