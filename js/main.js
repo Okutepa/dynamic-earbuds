@@ -62,7 +62,7 @@ console.log("IIFE Fired");
       pin: true,
       scrub: 1,
       markers: false,
-      start: "top top",
+      start: "center center",
     },
     onUpdate: render,
   });

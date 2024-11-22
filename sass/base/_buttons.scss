@@ -5,6 +5,8 @@ button {
     padding: 16px 32px;
     border-radius: 50px;
     transition: transform 0.3s ease-in-out;
+    max-width: 160px;
+    margin: 0 auto;
 
     &:hover {
         transform: scale(1.1);
