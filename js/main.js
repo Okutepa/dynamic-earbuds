@@ -5,8 +5,6 @@ console.log("IIFE Fired");
   const sidebar = document.querySelector(".sidebar");
   const showSidebarButton = document.querySelector(".hideondesktop a");
   const hideSidebarButton = document.querySelector(".sidebar li:first-child a");
-<<<<<<< Updated upstream
-=======
   const divisor = document.querySelector("#divisor");
   const slider = document.querySelector("#slider");
   const canvas = document.querySelector("#explode-view");
@@ -26,7 +24,6 @@ console.log("IIFE Fired");
 
   const images = []; //array to hold all of our images
 
->>>>>>> Stashed changes
   const infoHotspot = [
     {
       slot: "hotspot-1",
@@ -51,11 +48,8 @@ console.log("IIFE Fired");
     },
   ];
 
-<<<<<<< Updated upstream
-=======
   for (let i = 0; i < frameCount; i++) {
     const img = new Image();
-
     img.src = `images/sequence/x-ray-${i}.png`;
     images.push(img);
   }
@@ -73,7 +67,6 @@ console.log("IIFE Fired");
     onUpdate: render,
   });
 
->>>>>>> Stashed changes
 
   function showSidebar() {
     sidebar.classList.add("show");
@@ -112,6 +105,44 @@ console.log("IIFE Fired");
     gsap.to(infoContainer, { duration: 1, autoAlpha: 0 });
   }
 
+  function moveDivisor() {
+    console.log(slider.value);
+    divisor.style.width = slider.value + "%";
+  }
+
+  function render() {
+    const image = images[buds.frame];
+    
+    // Clear the canvas before rendering
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // Ensure the image is loaded
+    if (!image.complete) return;
+  
+    // Calculate the aspect ratios
+    const imageAspectRatio = image.width / image.height;
+    const canvasAspectRatio = canvas.width / canvas.height;
+  
+    let drawWidth, drawHeight, offsetX, offsetY;
+  
+    // Fit the image inside the canvas while maintaining aspect ratio
+    if (imageAspectRatio > canvasAspectRatio) {
+      // Image is wider than canvas
+      drawWidth = canvas.width;
+      drawHeight = canvas.width / imageAspectRatio;
+      offsetX = 0;
+      offsetY = (canvas.height - drawHeight) / 2; // Center vertically
+    } else {
+      // Image is taller than canvas
+      drawHeight = canvas.height;
+      drawWidth = canvas.height * imageAspectRatio;
+      offsetX = (canvas.width - drawWidth) / 2; // Center horizontally
+      offsetY = 0;
+    }
+  
+    // Draw the image
+    context.drawImage(image, offsetX, offsetY, drawWidth, drawHeight);
+  }
   const hotspots = document.querySelectorAll(".Hotspot");
   hotspots.forEach((hotspot) => {
     hotspot.addEventListener("mouseover", showInfo);
@@ -120,4 +151,6 @@ console.log("IIFE Fired");
 
   showSidebarButton.addEventListener("click", showSidebar);
   hideSidebarButton.addEventListener("click", hideSidebar);
+  slider.addEventListener("input", moveDivisor);
+  images[0].addEventListener("load", render);
 })();
