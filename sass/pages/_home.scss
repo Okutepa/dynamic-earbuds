@@ -3,7 +3,6 @@
 body {
     background-color: a.$secondary-color;
     font-family: a.$font-primary;
-    padding-top: 24px;
 
     .elipse {
         width: 300px;
@@ -53,35 +52,10 @@ body {
                 margin-bottom: 72px; 
                 letter-spacing: 2px;
              }
-<<<<<<< Updated upstream
-    }
-
-    .card {
-        background-color: a.$primary-color;
-        width: 100%;
-        height: 372px;
-        border-radius: 24px;
-        box-shadow: 1px 2px 42px -8px rgba(255, 255, 255, 0.458);
-    }
-
-    .accessories {
-        background-image: url(../../images/earbuds-ph.png);
-        background-position: center;
-        width: 498px;
-        height: 480px;
-        border-radius: 32px;
-        transition: transform 0.4s ease-in-out;
-        box-shadow: 1px 2px 42px -8px rgba(255, 255, 255, 0.458);
-    }
-
-    .accessories:hover {
-        transform: scale(1.05);
-=======
              
              .learn {
                 margin-left: 24px;
              }
->>>>>>> Stashed changes
     }
 
     #accessories-text {
@@ -147,8 +121,6 @@ body {
         }
     }
 
-<<<<<<< Updated upstream
-=======
     .wrapper {
         display: flex;
         align-items: center;
@@ -327,13 +299,10 @@ body {
         background: rgba(255, 255, 255, 0.5);
       }
 
->>>>>>> Stashed changes
 }
 
 
 
-<<<<<<< Updated upstream
-=======
 
 
 
@@ -675,4 +644,3 @@ body {
       }
 
     }
->>>>>>> Stashed changes
