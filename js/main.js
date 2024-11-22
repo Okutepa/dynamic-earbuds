@@ -5,6 +5,28 @@ console.log("IIFE Fired");
   const sidebar = document.querySelector(".sidebar");
   const showSidebarButton = document.querySelector(".hideondesktop a");
   const hideSidebarButton = document.querySelector(".sidebar li:first-child a");
+<<<<<<< Updated upstream
+=======
+  const divisor = document.querySelector("#divisor");
+  const slider = document.querySelector("#slider");
+  const canvas = document.querySelector("#explode-view");
+  const context = canvas.getContext("2d");
+  const parentWidth = canvas.parentElement.offsetWidth;
+
+
+  canvas.width = parentWidth;
+  canvas.height = 1080;
+
+  const buds = {
+    frame: 0,
+  };
+
+
+  const frameCount = 300; //how many frames do we have
+
+  const images = []; //array to hold all of our images
+
+>>>>>>> Stashed changes
   const infoHotspot = [
     {
       slot: "hotspot-1",
@@ -29,6 +51,29 @@ console.log("IIFE Fired");
     },
   ];
 
+<<<<<<< Updated upstream
+=======
+  for (let i = 0; i < frameCount; i++) {
+    const img = new Image();
+
+    img.src = `images/sequence/x-ray-${i}.png`;
+    images.push(img);
+  }
+
+  gsap.to(buds, {
+    frame: 299,
+    snap: "frame",
+    scrollTrigger: {
+      trigger: "#explode-view",
+      pin: true,
+      scrub: 1,
+      markers: false,
+      start: "top top",
+    },
+    onUpdate: render,
+  });
+
+>>>>>>> Stashed changes
 
   function showSidebar() {
     sidebar.classList.add("show");
